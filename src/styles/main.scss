@@ -229,3 +229,41 @@ button, input[type="submit"], input[type="reset"] {
     background-color: aquamarine;
     text-align: center;
 }
+
+.dash {
+    position: relative;
+    height: 86vh;
+    background-image: url(/src/res/assets/img/backdrops/Query-two.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    &-list{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 69.7vh;
+        width: 75vw;
+        transform: translate3d(-50%, -50%, 0);
+        background-color: rgba($color: #FFFFFF, $alpha: 0.57);
+        overflow-y: scroll;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar { width: 0 !important }
+        &-entry{
+            height: 7vh;
+            width: 100%;
+            font-size: 2rem;
+            line-height: 7vh;
+            text-align: center;
+            &:nth-of-type(odd) {
+                background-image: linear-gradient(to right, #6BB5CE, #37EBBB);
+                color: white;
+                box-shadow: #eee 1px 1px 1px 1px;
+            }
+            &:nth-of-type(even) {
+                background-color: white;
+                color: black;
+                box-shadow: #eee 1px 1px 1px 1px;
+            }
+        }
+    }
+}

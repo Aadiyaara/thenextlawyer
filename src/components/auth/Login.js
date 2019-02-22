@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 // For Login Form
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+
 import Axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 export default class Login extends Component {
 
     state = {
         'username': '',
         'password': '',
+        'res': '',
     }
 
     handleChange = (e) => {
@@ -33,11 +36,23 @@ export default class Login extends Component {
             }).then((res) => {
                 var res = res.data;
                 console.log('Login Response: ', res);
+                this.setState({
+                    redirect: true,
+                    res: res,
+                })
             });
         }
     }
 
     render () {
+        
+        if (this.state.redirect) {
+            return <Redirect push to={{
+                pathname: '/dash',
+                state: this.state.res,
+            }} />;
+        }
+
         return(
             <div className = 'authbox-login-interface'>
 
