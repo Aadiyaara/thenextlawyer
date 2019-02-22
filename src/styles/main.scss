@@ -1,0 +1,231 @@
+// Temp basics
+
+// FONTS
+
+// Raleway
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// Helvetica-w01-Bold
+@import url('//db.onlinewebfonts.com/c/c1abe50701241db4325576abf409ee8c?family=HelveticaWorldW01-Bold');
+
+// Spinnaker
+@import url('//db.onlinewebfonts.com/c/ccccb39cef46c875084dd8ecf56d9436?family=Spinnaker');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+// Refreshers
+
+ul {
+    list-style-type: none;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+// Navbar
+.navbar {
+    height: 14vh;
+    padding: 3.5vh;
+    // border: solid black 1px;
+    &_interact {
+        margin-left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        background-color: rgba($color: #FFFFFF, $alpha: 0.7);
+        &_home_button{
+            border: solid #1A2B6D 0.425rem;
+            color: #1A2B6D;
+            padding-left: 0.95rem;
+            padding-right: 0.95rem;
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+            display: inline;
+            font-size: 1.5rem;
+            font-family: 'arial';
+            font-weight: 1000;
+            transition: 0.75s;
+            &:hover{
+                border: solid #D41317 0.425rem;
+                color: #D41317;
+            }
+        }
+        &_list{
+            display: inline;
+            &item{
+                margin-left: 5rem; 
+                color: #1A2B6D;
+                padding: 0.5rem;
+                font-family: 'HelveticaWorldW01-Bold';
+                font-size: 1.05rem;
+                display: inline-block;
+                transition: 0.5s;
+                &:hover{
+                    color: #D41317;
+                }
+            }
+        }
+    }
+}
+
+.loginpane {
+    position: relative;
+    height: 86vh;
+    background-image: url('/src/res/assets/img/backdrops/Query-one.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.loginpane_flex {
+    position: relative;
+    overflow: hidden;
+    font-family: 'Spinnaker';
+    color: #1A2B6D;
+    height: 100%;
+    width: 48%;
+    padding: 1rem;
+    display: inline-block;
+    &_heading_primary{
+        font-size: 4rem;
+    }
+    &_heading_secondary{
+        font-size: 1.9rem;
+    }
+    &_textbox{
+        display: inline-block;
+        margin-top: 1.5vh;
+        margin-left: 12.759vw;
+        width: 50%;
+        text-align: justify;
+        // background-color: red;
+    }
+    &_text_primary{
+        font-size: 1.45rem;
+    }
+    &_text_secondary{
+        margin-top: 2vh;
+        font-size: 1.2rem;
+        color: black;
+    }
+    &::after{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        // background-color: red;
+        z-index: -1;
+        content: '';
+        height: 81%;
+        width: 100%;
+        border-right: solid #1A2B6D 2px;
+    }
+    // &_spacesized{
+    //     display: inline-block;
+    //     background-color: #1A2B6D;
+    //     width: 40%;
+    //     height: 100%;
+    // }
+}
+
+.authbox{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 0.25rem;
+    width: 60vw;
+    height: 60vh;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.57);
+    &_pane{
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        height: 100%;
+    }
+    &-arena{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        height: 45vh;
+        width: 75%;
+        background-color: rgba($color: #FFFFFF, $alpha: 0.75);
+        // border: 0.05rem solid black
+        text-align: center;
+        border-radius: 2rem;
+    }
+    &-login{
+        &-interface{
+            height: 35vh;
+            width: 100%;
+        }
+        &-head{
+            height: 5vh;
+            color: white;
+            font-size: 2rem;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            background-color: #1A2B6D;
+            line-height: 5vh;
+        }
+
+    }
+    &-register{
+        &-interface{
+            height: 35vh;
+            width: 100%;
+            &-form{
+                &-username{
+                    width: 20vw;;
+                }
+            }
+        }
+        &-head{
+            height: 5vh;
+            color: white;
+            font-size: 2rem;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            background-color: #1A2B6D;
+            line-height: 5vh;
+        }
+    }
+}
+
+#login-outlined-email-input{
+    width: 20vw;
+}
+
+#login-outlined-password-input{
+    width: 20vw;
+}
+
+#register-outlined-email-input{
+    width: 20vw;
+}
+
+#register-outlined-password-input{
+    width: 20vw;
+}
+
+.list-item{
+    width: 75vw;
+    height: 7vh;
+    background-color: aquamarine;
+    text-align: center;
+}
